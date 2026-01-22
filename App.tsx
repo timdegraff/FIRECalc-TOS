@@ -36,7 +36,7 @@ const Header: React.FC = () => {
 
 const Footer: React.FC = () => (
   <footer className="bg-white border-t border-slate-200 pt-12 pb-8 mt-auto">
-    <div className="max-w-5xl mx-auto px-4">
+    <div className="max-w-5xl mx-auto px-4 text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div>
           <h3 className="font-bold text-slate-900 mb-4 tracking-tight">FIRECalc</h3>
@@ -71,31 +71,32 @@ const Footer: React.FC = () => (
 
 const Home: React.FC = () => (
   <div className="max-w-5xl mx-auto px-4 py-16 sm:py-24 text-slate-900 text-left">
-    <div className="text-center">
+    <div className="mb-20">
       <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 mb-6">
         Official Support & Legal
       </div>
       <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">FIRECalc for iOS</h1>
-      <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p className="text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed">
         The comprehensive financial independence calculator. Plan your retirement and track your journey to financial freedom.
       </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Link to="/privacy" className="w-full sm:w-auto px-8 py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">Privacy Policy</Link>
-        <Link to="/terms" className="w-full sm:w-auto px-8 py-3 bg-white text-slate-900 font-semibold border border-slate-200 rounded-xl hover:bg-slate-50 transition-all shadow-sm">Terms of Use</Link>
+      <div className="flex flex-col sm:flex-row items-center gap-4">
+        <Link to="/privacy" className="w-full sm:w-auto px-8 py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-200 text-center">Privacy Policy</Link>
+        <Link to="/terms" className="w-full sm:w-auto px-8 py-3 bg-white text-slate-900 font-semibold border border-slate-200 rounded-xl hover:bg-slate-50 transition-all shadow-sm text-center">Terms of Use</Link>
       </div>
     </div>
-    <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-      <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm text-left">
         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i className="fa-solid fa-shield-halved text-xl"></i></div>
         <h3 className="text-lg font-bold mb-3">Privacy First</h3>
         <p className="text-slate-500 text-sm">FIRECalc is a "Local-First" application. Your data stays on your device.</p>
       </div>
-      <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+      <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm text-left">
         <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6"><i className="fa-solid fa-chart-line text-xl"></i></div>
         <h3 className="text-lg font-bold mb-3">Accurate Data</h3>
         <p className="text-slate-500 text-sm">Simulations based on historical market trends and community-standard methodologies.</p>
       </div>
-      <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
+      <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm text-left">
         <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i className="fa-solid fa-headset text-xl"></i></div>
         <h3 className="text-lg font-bold mb-3">Support</h3>
         <p className="text-slate-500 text-sm">Contact <strong>FIRECalcApp@gmail.com</strong> for assistance or feature requests.</p>
@@ -110,14 +111,16 @@ const PrivacyPolicy: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight uppercase">Privacy Policy</h1>
       <p className="text-slate-500 text-sm font-medium">Last Updated: January 2026</p>
     </div>
-    <div className="space-y-8">
+    <div className="space-y-12">
       <div>
         <p className="text-slate-600 leading-relaxed">Your privacy is important to us. This policy explains how we handle your data.</p>
       </div>
       <div>
         <h2 className="text-slate-900 font-bold mb-1 text-lg">1. Data Storage & iCloud</h2>
-        <p className="text-slate-600 leading-relaxed">FIRECalc is a "Local-First" application. Your financial data is stored locally on your device.</p>
-        <p className="text-slate-600 leading-relaxed">However, this data may be automatically backed up to your personal iCloud storage or iTunes backup as part of your device's standard backup procedures. This data is encrypted by Apple and is governed by Apple's Privacy Policy. We (the developers) do not have access to your personal iCloud data or financial profile.</p>
+        <div className="space-y-4">
+          <p className="text-slate-600 leading-relaxed">FIRECalc is a "Local-First" application. Your financial data is stored locally on your device.</p>
+          <p className="text-slate-600 leading-relaxed">However, this data may be automatically backed up to your personal iCloud storage or iTunes backup as part of your device's standard backup procedures. This data is encrypted by Apple and is governed by Apple's Privacy Policy. We (the developers) do not have access to your personal iCloud data or financial profile.</p>
+        </div>
       </div>
       <div>
         <h2 className="text-slate-900 font-bold mb-1 text-lg">2. Analytics</h2>
@@ -137,7 +140,7 @@ const TermsOfUse: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight uppercase">Terms of Use</h1>
       <p className="text-slate-500 text-sm font-medium">Last Updated: January 2026</p>
     </div>
-    <div className="space-y-10">
+    <div className="space-y-12">
       <div>
         <p className="text-slate-600 leading-relaxed">By using this application, you agree to the following terms.</p>
       </div>
@@ -155,18 +158,22 @@ const TermsOfUse: React.FC = () => (
       </div>
       <div>
         <h2 className="text-slate-900 font-bold mb-1 text-lg">4. Government Programs & Data Accuracy</h2>
-        <p className="text-slate-600 leading-relaxed">Estimates regarding government programs and tax liabilities are based on generalized data which may be outdated or inaccurate. This application does not guarantee eligibility for any program.</p>
+        <div className="space-y-4">
+          <p className="text-slate-600 leading-relaxed">Estimates regarding government programs and tax liabilities are based on generalized data which may be outdated or inaccurate. This application does not guarantee eligibility for any program.</p>
+          <p className="text-slate-600 leading-relaxed font-semibold">This application does not guarantee eligibility for any program. You must register and apply directly with the appropriate government authorities to determine actual eligibility and receive benefits.</p>
+        </div>
       </div>
       <div>
         <h2 className="text-slate-900 font-bold mb-1 text-lg">5. Apple Standard EULA</h2>
-        <p className="text-slate-600 leading-relaxed">This application is subject to the standard Apple Licensed Application End User License Agreement (EULA).</p>
-        <p className="text-slate-600 leading-relaxed">By using this application, you acknowledge and agree to be bound by its terms.</p>
-        <p className="text-slate-600 leading-relaxed mt-2">
-          You may view the full EULA at:<br />
-          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">
-            https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-          </a>
-        </p>
+        <div className="space-y-4">
+          <p className="text-slate-600 leading-relaxed">This application is subject to the standard Apple Licensed Application End User License Agreement (EULA). By using this application, you acknowledge and agree to be bound by its terms.</p>
+          <p className="text-slate-600 leading-relaxed">
+            You may view the full EULA at:<br />
+            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">
+              https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+            </a>
+          </p>
+        </div>
       </div>
       <div>
         <h2 className="text-slate-900 font-bold mb-1 text-lg">Contact</h2>
