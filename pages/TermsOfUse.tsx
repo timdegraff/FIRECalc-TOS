@@ -37,14 +37,25 @@ const TermsOfUse: React.FC = () => {
         <p className="text-slate-600 leading-relaxed">
           Estimates regarding government programs (including but not limited to SNAP, Medicaid, Medicare, and Social Security) and tax liabilities are based on generalized data which may be outdated, inaccurate, or subject to specific state exclusions. State and Federal laws change frequently.
         </p>
-        <p className="text-slate-600 leading-relaxed font-semibold bg-slate-50 p-4 border-l-4 border-slate-300">
+        <p className="text-slate-600 leading-relaxed font-semibold">
           This application does not guarantee eligibility for any program. You must register and apply directly with the appropriate government authorities to determine actual eligibility and receive benefits.
         </p>
 
         <h2 className="text-slate-900 font-bold mt-8">5. Apple Standard EULA</h2>
-        <p className="text-slate-600 leading-relaxed italic">
-          This app is subject to the standard Apple Licensed Application End User License Agreement.
-        </p>
+        <div className="mt-4">
+          <p className="text-slate-600 leading-relaxed mb-4">
+            This application is subject to the standard Apple Licensed Application End User License Agreement (EULA).
+          </p>
+          <p className="text-slate-600 leading-relaxed mb-4">
+            By using this application, you acknowledge and agree to be bound by its terms.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            You may view the full EULA at:<br />
+            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">
+              https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+            </a>
+          </p>
+        </div>
 
         <h2 className="text-slate-900 font-bold mt-8">Contact</h2>
         <p className="text-slate-600 leading-relaxed">
