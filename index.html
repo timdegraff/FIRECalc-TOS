@@ -59,8 +59,8 @@
             </Link>
             <nav className="hidden sm:flex space-x-8">
               <Link to="/" className={`text-sm font-medium ${isActive('/') ? 'text-blue-600' : 'text-slate-500 hover:text-slate-900'}`}>Home</Link>
-              <Link to="/privacy" className={`text-sm font-medium ${isActive('/privacy') ? 'text-blue-600' : 'text-slate-500 hover:text-slate-900'}`}>Privacy</Link>
-              <Link to="/terms" className={`text-sm font-medium ${isActive('/terms') ? 'text-blue-600' : 'text-slate-500 hover:text-slate-900'}`}>Terms</Link>
+              <Link to="/privacy" className={`text-sm font-medium ${isActive('/privacy') ? 'text-blue-600' : 'text-slate-500 hover:text-slate-900'}`}>Privacy Policy</Link>
+              <Link to="/terms" className={`text-sm font-medium ${isActive('/terms') ? 'text-blue-600' : 'text-slate-500 hover:text-slate-900'}`}>Terms of Use</Link>
             </nav>
           </div>
         </header>
@@ -68,27 +68,29 @@
     };
 
     const Footer = () => (
-      <footer className="bg-white border-t border-slate-200 pt-12 pb-8 mt-auto">
-        <div className="max-w-5xl mx-auto px-4 text-left">
+      <footer className="bg-white border-t border-slate-200 pt-12 pb-8 mt-auto text-left">
+        <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-slate-900 mb-4 tracking-tight">FIRECalc</h3>
               <p className="text-slate-500 text-sm leading-relaxed">Empowering your financial independence journey with precision tools.</p>
+              <p className="text-slate-400 text-xs mt-4">Developed by <span className="font-medium text-slate-600">Tim DeGraff</span></p>
             </div>
             <div>
-              <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wider text-left">Legal</h4>
-              <ul className="space-y-2 text-sm text-slate-500 text-left">
+              <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wider">Legal</h4>
+              <ul className="space-y-2 text-sm text-slate-500">
                 <li><Link to="/privacy" className="hover:text-blue-600">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="hover:text-blue-600">Terms of Use</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wider text-left">Contact</h4>
+              <h4 className="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wider">Contact</h4>
               <p className="text-sm text-slate-500"><a href="mailto:FIRECalcApp@gmail.com" className="hover:text-blue-600">FIRECalcApp@gmail.com</a></p>
             </div>
           </div>
-          <div className="border-t border-slate-100 pt-8 text-xs text-slate-400">
-            <p>© {new Date().getFullYear()} Tim DeGraff. All rights reserved. iOS and App Store are trademarks of Apple Inc.</p>
+          <div className="border-t border-slate-100 pt-8 text-xs text-slate-400 flex flex-col md:flex-row justify-between">
+            <p>© {new Date().getFullYear()} Tim DeGraff. All rights reserved.</p>
+            <p className="mt-2 md:mt-0 italic">iOS and App Store are trademarks of Apple Inc.</p>
           </div>
         </div>
       </footer>
@@ -98,28 +100,29 @@
     const Home = () => (
       <div className="max-w-5xl mx-auto px-4 py-16 sm:py-24 text-left">
         <div className="mb-20">
+          <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 mb-6">Official Support & Legal</div>
           <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">FIRECalc for iOS</h1>
           <p className="text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed">The comprehensive financial independence calculator. Plan your retirement and track your journey to financial freedom.</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/privacy" className="px-8 py-3 bg-slate-900 text-white font-semibold rounded-xl text-center">Privacy Policy</Link>
-            <Link to="/terms" className="px-8 py-3 bg-white text-slate-900 font-semibold border border-slate-200 rounded-xl text-center">Terms of Use</Link>
+            <Link to="/privacy" className="px-8 py-3 bg-slate-900 text-white font-semibold rounded-xl text-center shadow-lg shadow-slate-200">Privacy Policy</Link>
+            <Link to="/terms" className="px-8 py-3 bg-white text-slate-900 font-semibold border border-slate-200 rounded-xl text-center shadow-sm">Terms of Use</Link>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i className="fa-solid fa-shield-halved"></i></div>
+            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i className="fa-solid fa-shield-halved text-xl"></i></div>
             <h3 className="font-bold mb-2">Privacy First</h3>
             <p className="text-slate-500 text-sm">Your data stays on your device. We never see your financial profile.</p>
           </div>
           <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6"><i className="fa-solid fa-chart-line"></i></div>
+            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6"><i className="fa-solid fa-chart-line text-xl"></i></div>
             <h3 className="font-bold mb-2">Accurate</h3>
             <p className="text-slate-500 text-sm">Simulations based on historical market trends and standard methodologies.</p>
           </div>
           <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm">
-            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i className="fa-solid fa-headset"></i></div>
+            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i className="fa-solid fa-headset text-xl"></i></div>
             <h3 className="font-bold mb-2">Support</h3>
-            <p className="text-slate-500 text-sm">Contact support for assistance or feature requests anytime.</p>
+            <p className="text-slate-500 text-sm">Contact <strong>FIRECalcApp@gmail.com</strong> for assistance or feature requests.</p>
           </div>
         </div>
       </div>
@@ -127,15 +130,26 @@
 
     const PrivacyPolicy = () => (
       <div className="max-w-3xl mx-auto px-4 py-16 sm:py-24 text-left">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-12 tracking-tight uppercase">Privacy Policy</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight uppercase">PRIVACY POLICY</h1>
+        <p className="text-slate-500 text-sm font-medium mb-12">Last Updated: January 2026</p>
+        
         <div className="space-y-12">
           <section>
-            <h2 className="text-slate-900 font-bold mb-2 text-lg">1. Data Storage & iCloud</h2>
-            <p className="text-slate-600 leading-relaxed">FIRECalc is a "Local-First" application. Financial data is stored locally. Backups to iCloud are governed by Apple's Privacy Policy; developers have no access to this data.</p>
+            <p className="text-slate-600 leading-relaxed mb-8">Your privacy is important to us. This policy explains how we handle your data.</p>
+            
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">1. Data Storage & iCloud</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">FIRECalc is a "Local-First" application. Your financial data is stored locally on your device.</p>
+            <p className="text-slate-600 leading-relaxed">However, this data may be automatically backed up to your personal iCloud storage or iTunes backup as part of your device's standard backup procedures. This data is encrypted by Apple and is governed by Apple's Privacy Policy. We (the developers) do not have access to your personal iCloud data or financial profile.</p>
           </section>
+
           <section>
-            <h2 className="text-slate-900 font-bold mb-2 text-lg">2. Analytics</h2>
-            <p className="text-slate-600 leading-relaxed">Anonymous usage analytics may be used to improve the app. No personal financial values are tracked.</p>
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">2. Analytics</h2>
+            <p className="text-slate-600 leading-relaxed">We may use anonymous usage analytics (e.g., "User visited Fire Tab") to improve the app. No personally identifiable financial values are tracked.</p>
+          </section>
+
+          <section>
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">3. Contact</h2>
+            <p className="text-slate-600 leading-relaxed">For privacy concerns, please contact support at <a href="mailto:FIRECalcApp@gmail.com" className="text-blue-600 hover:underline">FIRECalcApp@gmail.com</a>.</p>
           </section>
         </div>
       </div>
@@ -143,19 +157,38 @@
 
     const TermsOfUse = () => (
       <div className="max-w-3xl mx-auto px-4 py-16 sm:py-24 text-left">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-12 tracking-tight uppercase">Terms of Use</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight uppercase">TERMS OF USE</h1>
+        <p className="text-slate-500 text-sm font-medium mb-12">Last Updated: January 2026</p>
+        
         <div className="space-y-12">
           <section>
-            <h2 className="text-slate-900 font-bold mb-2 text-lg">1. Not Financial Advice</h2>
-            <p className="text-slate-600 leading-relaxed">This tool is for educational purposes only. Simulations do not guarantee future results.</p>
+            <p className="text-slate-600 leading-relaxed mb-8">By using this application, you agree to the following terms.</p>
+            
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">1. Not Financial Advice</h2>
+            <p className="text-slate-600 leading-relaxed">This tool is for educational and entertainment purposes only. The simulations are hypothetical and do not guarantee future results. You should consult a qualified financial advisor before making investment decisions.</p>
           </section>
+
           <section>
-            <h2 className="text-slate-900 font-bold mb-2 text-lg">2. Liability</h2>
-            <p className="text-slate-600 leading-relaxed">Developers are not liable for financial losses resulting from the use of this software.</p>
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">2. Subscriptions</h2>
+            <p className="text-slate-600 leading-relaxed">Premium features require an active subscription. Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period. You can manage your subscription in your device settings.</p>
           </section>
+
           <section>
-            <h2 className="text-slate-900 font-bold mb-2 text-lg">3. Apple EULA</h2>
-            <p className="text-slate-600 leading-relaxed">Subject to the standard Apple Licensed Application End User License Agreement (EULA).</p>
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">3. Liability</h2>
+            <p className="text-slate-600 leading-relaxed">The developers of FIRECalc are not liable for any financial losses or damages resulting from the use of this software.</p>
+          </section>
+
+          <section>
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">4. Government Programs & Data Accuracy</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">Estimates regarding government programs (including but not limited to SNAP, Medicaid, Medicare, and Social Security) and tax liabilities are based on generalized data which may be outdated, inaccurate, or subject to specific state exclusions. State and Federal laws change frequently.</p>
+            <p className="text-slate-600 leading-relaxed">This application does not guarantee eligibility for any program. You must register and apply directly with the appropriate government authorities to determine actual eligibility and receive benefits.</p>
+          </section>
+
+          <section>
+            <h2 className="text-slate-900 font-bold mb-4 text-lg">5. Apple Standard EULA</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">This application is subject to the standard Apple Licensed Application End User License Agreement (EULA). By using this application, you acknowledge and agree to be bound by its terms.</p>
+            <p className="text-slate-600 leading-relaxed">You may view the full EULA at:<br />
+            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" className="text-blue-600 break-all text-sm hover:underline">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
           </section>
         </div>
       </div>
@@ -165,7 +198,7 @@
     const App = () => (
       <HashRouter>
         <ScrollToTop />
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-slate-50">
           <Header />
           <main className="flex-grow">
             <Routes>
